@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)file:///C:/Users/sridevi.p/Downloads/sridevi_portfolio%20(4)%20(1).html#contact -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sridevi P — Data Analyst Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./Sridevi P — Data Analyst Portfolio_files/css2" rel="stylesheet">
+<style>
+/* ─── RESET & BASE ─────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;
+  --off:#f8f7f4;
+  --off2:#f0ede7;
+  --off3:#e8e4dc;
+  --ink:#0f1117;
+  --ink2:#2d3142;
+  --ink3:#5a5f7a;
+  --ink4:#9097b5;
+  --ink5:#c2c6d8;
+  --blue:#1a56db;
+  --blue2:#1e4ec8;
+  --blue-light:#eef2ff;
+  --blue-mid:#c7d5f8;
+  --teal:#0891b2;
+  --teal-light:#ecfeff;
+  --green:#059669;
+  --green-light:#ecfdf5;
+  --amber:#d97706;
+  --amber-light:#fffbeb;
+  --rose:#e11d48;
+  --rose-light:#fff1f2;
+  --purple:#7c3aed;
+  --purple-light:#f5f3ff;
+  --shadow-sm:0 1px 3px rgba(15,17,23,.08),0 1px 2px rgba(15,17,23,.05);
+  --shadow:0 4px 12px rgba(15,17,23,.08),0 2px 6px rgba(15,17,23,.05);
+  --shadow-lg:0 12px 32px rgba(15,17,23,.10),0 4px 12px rgba(15,17,23,.06);
+  --radius:10px;
+  --radius-lg:16px;
+  --radius-xl:24px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Sora',sans-serif;background:var(--off);color:var(--ink2);line-height:1.6;overflow-x:hidden}
+
+/* ─── SCROLLBAR ─────────────────────────────────────────── */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--off2)}
+::-webkit-scrollbar-thumb{background:var(--blue-mid);border-radius:99px}
+
+/* ─── NAV ───────────────────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:64px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 3rem;
+  background:rgba(248,247,244,.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--off3);
+}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-brand-avatar{
+  width:34px;height:34px;border-radius:8px;
+  background:var(--blue);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:500;color:#fff;
+  letter-spacing:.04em;
+}
+.nav-brand-name{font-family:'Sora',sans-serif;font-size:.9rem;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.nav-links{display:flex;align-items:center;gap:.25rem;list-style:none}
+.nav-links a{
+  padding:.4rem .85rem;border-radius:6px;
+  font-size:.8rem;font-weight:500;color:var(--ink3);
+  text-decoration:none;transition:all .18s;
+}
+.nav-links a:hover,.nav-links a.active{background:var(--blue-light);color:var(--blue)}
+.nav-cta{
+  padding:.5rem 1.2rem;border-radius:7px;
+  background:var(--blue);color:#fff;
+  font-size:.8rem;font-weight:600;text-decoration:none;
+  transition:background .18s,transform .15s;
+  box-shadow:0 2px 8px rgba(26,86,219,.3);
+}
+.nav-cta:hover{background:var(--blue2);transform:translateY(-1px)}
+.nav-status{display:flex;align-items:center;gap:8px;font-size:.75rem;font-weight:500;color:var(--green)}
+.ns-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(5,150,105,.18);animation:breathe 2.5s ease infinite}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 3px rgba(5,150,105,.18)}50%{box-shadow:0 0 0 5px rgba(5,150,105,.08)}}
+
+/* ─── HERO ───────────────────────────────────────────────── */
+#hero{
+  min-height:100vh;
+  padding:120px 3rem 6rem;
+  position:relative;overflow:hidden;
+  background:var(--white);
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 700px 500px at 80% 40%,rgba(199,213,248,.35),transparent),
+    radial-gradient(ellipse 400px 400px at 10% 80%,rgba(8,145,178,.06),transparent);
+  pointer-events:none;
+}
+.hero-grid-lines{
+  position:absolute;inset:0;
+  background-image:linear-gradient(var(--off3) 1px,transparent 1px),linear-gradient(90deg,var(--off3) 1px,transparent 1px);
+  background-size:48px 48px;opacity:.45;pointer-events:none;
+}
+.hero-inner{
+  position:relative;z-index:2;
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--green-light);border:1px solid rgba(5,150,105,.2);
+  padding:.35rem .9rem;border-radius:99px;
+  font-size:.72rem;font-weight:600;color:var(--green);letter-spacing:.04em;text-transform:uppercase;
+  margin-bottom:1.6rem;
+  opacity:0;animation:slideUp .6s .1s ease forwards;
+}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green)}
+.hero-name{
+  font-family:'Fraunces',serif;
+  font-size:clamp(3rem,5vw,5rem);
+  font-weight:600;line-height:1.04;
+  letter-spacing:-.03em;
+  color:var(--ink);
+  margin-bottom:.5rem;
+  opacity:0;animation:slideUp .6s .18s ease forwards;
+}
+.hero-name em{font-style:italic;color:var(--blue)}
+.hero-title{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.88rem;font-weight:400;
+  color:var(--ink3);letter-spacing:.04em;
+  margin-bottom:1.8rem;
+  opacity:0;animation:slideUp .6s .26s ease forwards;
+}
+.hero-title span{color:var(--blue);font-weight:500}
+.hero-desc{
+  font-size:1rem;color:var(--ink3);line-height:1.8;
+  max-width:500px;margin-bottom:2.5rem;
+  opacity:0;animation:slideUp .6s .34s ease forwards;
+}
+.hero-ctas{
+  display:flex;gap:.8rem;flex-wrap:wrap;
+  margin-bottom:3rem;
+  opacity:0;animation:slideUp .6s .42s ease forwards;
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:.75rem 1.6rem;border-radius:8px;
+  background:var(--blue);color:#fff;
+  font-size:.85rem;font-weight:600;text-decoration:none;
+  box-shadow:0 3px 10px rgba(26,86,219,.3);
+  transition:all .18s;
+}
+.btn-primary:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 6px 18px rgba(26,86,219,.35)}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:.75rem 1.6rem;border-radius:8px;
+  background:var(--white);color:var(--ink2);
+  font-size:.85rem;font-weight:600;text-decoration:none;
+  border:1.5px solid var(--off3);
+  transition:all .18s;
+}
+.btn-secondary:hover{border-color:var(--blue-mid);color:var(--blue);background:var(--blue-light)}
+.hero-meta{
+  display:flex;gap:2.5rem;flex-wrap:wrap;
+  opacity:0;animation:slideUp .6s .5s ease forwards;
+}
+.hero-meta-item{}
+.hero-meta-val{font-family:'Fraunces',serif;font-size:1.9rem;font-weight:600;color:var(--ink);line-height:1}
+.hero-meta-val .cnt{display:inline}
+.hero-meta-lbl{font-size:.72rem;color:var(--ink4);font-weight:500;margin-top:.2rem}
+
+/* hero right */
+.hero-right{
+  opacity:0;animation:slideUp .6s .5s ease forwards;
+}
+.profile-card{
+  background:var(--white);border:1.5px solid var(--off3);border-radius:var(--radius-xl);
+  box-shadow:var(--shadow-lg);overflow:hidden;
+}
+.pc-header{
+  background:var(--blue);
+  padding:1.8rem 1.8rem 1rem;
+  position:relative;overflow:hidden;
+}
+.pc-header::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg,rgba(255,255,255,.04) 0,rgba(255,255,255,.04) 1px,transparent 1px,transparent 12px);
+}
+.pc-avatar{
+  width:58px;height:58px;border-radius:12px;
+  background:rgba(255,255,255,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:#fff;
+  margin-bottom:.9rem;border:2px solid rgba(255,255,255,.3);
+}
+.pc-name{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:#fff;margin-bottom:.2rem}
+.pc-role{font-size:.75rem;color:rgba(255,255,255,.72);font-weight:400}
+.pc-body{padding:1.4rem 1.8rem}
+.pc-row{display:flex;align-items:center;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--off2);font-size:.82rem;color:var(--ink3)}
+.pc-row:last-child{border-bottom:none}
+.pc-row-key{
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:500;
+  color:var(--blue);width:52px;flex-shrink:0;letter-spacing:.04em;
+}
+.pc-row-icon{width:16px;height:16px;flex-shrink:0;opacity:.5}
+.pc-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--off3);border-top:1px solid var(--off3);
+}
+.pc-stat{
+  background:var(--off);padding:1.1rem;text-align:center;
+}
+.pc-stat-n{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600;color:var(--ink);line-height:1}
+.pc-stat-l{font-size:.65rem;color:var(--ink4);font-weight:500;margin-top:.25rem;letter-spacing:.03em;text-transform:uppercase}
+
+/* ─── SECTION SHELL ──────────────────────────────────────── */
+.section{padding:6rem 3rem;max-width:1200px;margin:0 auto}
+.section-divider{height:1px;background:var(--off3);max-width:100%}
+.sec-label{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;font-weight:500;
+  color:var(--blue);letter-spacing:.1em;text-transform:uppercase;
+  background:var(--blue-light);padding:.3rem .75rem;border-radius:99px;
+  margin-bottom:1rem;
+}
+.sec-label-dot{width:5px;height:5px;border-radius:50%;background:var(--blue)}
+.sec-heading{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.8rem,3vw,2.6rem);font-weight:600;
+  color:var(--ink);letter-spacing:-.02em;margin-bottom:.5rem;line-height:1.15;
+}
+.sec-sub{font-size:.95rem;color:var(--ink3);max-width:560px;line-height:1.7}
+.sec-header-row{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:3rem;flex-wrap:wrap}
+
+/* ─── SKILLS ─────────────────────────────────────────────── */
+.skills-layout{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--off3);border:1px solid var(--off3);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm)}
+.skill-block{background:var(--white);padding:2rem;transition:background .2s}
+.skill-block:hover{background:var(--off)}
+.skill-block-label{
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:500;
+  color:var(--ink4);letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:1.1rem;display:flex;align-items:center;gap:.5rem;
+}
+.skill-block-label::before{content:'';width:3px;height:12px;background:var(--blue);border-radius:2px;display:inline-block}
+.skill-chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip{
+  padding:.3rem .75rem;border-radius:6px;
+  font-size:.75rem;font-weight:500;
+  border:1px solid;
+  transition:all .18s;cursor:default;
+}
+.chip-blue{background:var(--blue-light);color:var(--blue2);border-color:var(--blue-mid)}
+.chip-blue:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.chip-teal{background:var(--teal-light);color:var(--teal);border-color:rgba(8,145,178,.25)}
+.chip-teal:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
+.chip-green{background:var(--green-light);color:var(--green);border-color:rgba(5,150,105,.25)}
+.chip-green:hover{background:var(--green);color:#fff;border-color:var(--green)}
+.chip-purple{background:var(--purple-light);color:var(--purple);border-color:rgba(124,58,237,.25)}
+.chip-purple:hover{background:var(--purple);color:#fff;border-color:var(--purple)}
+.chip-amber{background:var(--amber-light);color:var(--amber);border-color:rgba(217,119,6,.25)}
+.chip-amber:hover{background:var(--amber);color:#fff;border-color:var(--amber)}
+
+/* ─── CLIENTS ────────────────────────────────────────────── */
+.clients-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem}
+.client-card{
+  background:var(--white);border:1.5px solid var(--off3);border-radius:var(--radius-lg);
+  padding:1.6rem;transition:all .22s;
+  box-shadow:var(--shadow-sm);
+  position:relative;overflow:hidden;
+}
+.client-card::before{
+  content:'';position:absolute;top:0;left:0;width:4px;height:100%;
+  border-radius:4px 0 0 4px;
+  background:var(--blue);opacity:0;transition:opacity .2s;
+}
+.client-card:hover{border-color:var(--blue-mid);box-shadow:var(--shadow);transform:translateY(-2px)}
+.client-card:hover::before{opacity:1}
+.cc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem;gap:.75rem}
+.cc-name{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--ink);line-height:1.2}
+.cc-badge{
+  flex-shrink:0;padding:.22rem .65rem;border-radius:6px;
+  font-size:.65rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
+  border:1px solid;white-space:nowrap;
+}
+.badge-ai{background:var(--green-light);color:var(--green);border-color:rgba(5,150,105,.22)}
+.badge-bi{background:var(--blue-light);color:var(--blue);border-color:var(--blue-mid)}
+.badge-mig{background:var(--amber-light);color:var(--amber);border-color:rgba(217,119,6,.22)}
+.badge-ins{background:var(--purple-light);color:var(--purple);border-color:rgba(124,58,237,.22)}
+.badge-ret{background:var(--teal-light);color:var(--teal);border-color:rgba(8,145,178,.22)}
+.badge-eng{background:var(--rose-light);color:var(--rose);border-color:rgba(225,29,72,.22)}
+.cc-desc{font-size:.84rem;color:var(--ink3);line-height:1.7;margin-bottom:1.1rem}
+.cc-stack{display:flex;flex-wrap:wrap;gap:.35rem}
+.cc-chip{
+  background:var(--off);border:1px solid var(--off3);
+  padding:.2rem .55rem;border-radius:5px;
+  font-family:'JetBrains Mono',monospace;font-size:.62rem;
+  color:var(--ink3);font-weight:400;
+}
+
+/* ─── EXPERIENCE ─────────────────────────────────────────── */
+.exp-list{display:flex;flex-direction:column;gap:0}
+.exp-entry{
+  display:grid;grid-template-columns:220px 1fr;
+  background:var(--white);border:1.5px solid var(--off3);border-radius:var(--radius-lg);
+  margin-bottom:1.25rem;overflow:hidden;box-shadow:var(--shadow-sm);
+  transition:box-shadow .2s,border-color .2s;
+}
+.exp-entry:hover{box-shadow:var(--shadow);border-color:var(--blue-mid)}
+.exp-sidebar{
+  padding:2rem 1.5rem;background:var(--off);border-right:1px solid var(--off3);
+  display:flex;flex-direction:column;gap:.4rem;
+}
+.exp-period{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:500;color:var(--blue);letter-spacing:.04em;margin-bottom:.3rem}
+.exp-company{font-family:'Fraunces',serif;font-size:1rem;font-weight:600;color:var(--ink)}
+.exp-loc{font-size:.75rem;color:var(--ink4);margin-top:.1rem}
+.exp-main{padding:2rem 2rem 2rem}
+.exp-role{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--ink2);margin-bottom:1.1rem}
+.exp-ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.exp-ul li{font-size:.87rem;color:var(--ink3);line-height:1.72;padding-left:1.1rem;position:relative}
+.exp-ul li::before{content:'';position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--blue);flex-shrink:0}
+
+/* ─── AWARDS ─────────────────────────────────────────────── */
+.awards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem}
+.award-card{
+  background:var(--white);border:1.5px solid var(--off3);border-radius:var(--radius-lg);
+  padding:1.8rem 1.6rem;box-shadow:var(--shadow-sm);
+  transition:all .22s;
+}
+.award-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:var(--blue-mid)}
+.award-icon-wrap{width:44px;height:44px;border-radius:10px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1.1rem}
+.award-title{font-family:'Fraunces',serif;font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:.35rem;line-height:1.35}
+.award-org{font-size:.78rem;color:var(--ink4)}
+
+/* ─── CERTS ──────────────────────────────────────────────── */
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1rem}
+.cert-card{
+  display:flex;align-items:center;gap:1rem;
+  background:var(--white);border:1.5px solid var(--off3);border-radius:var(--radius);
+  padding:1.2rem 1.4rem;box-shadow:var(--shadow-sm);
+  transition:all .2s;
+}
+.cert-card:hover{border-color:var(--blue-mid);box-shadow:var(--shadow);transform:translateX(3px)}
+.cert-icon{
+  width:38px;height:38px;border-radius:8px;background:var(--blue-light);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.cert-icon svg{width:18px;height:18px}
+.cert-name{font-size:.88rem;font-weight:600;color:var(--ink2);flex:1;line-height:1.35}
+.cert-check{color:var(--green);margin-left:auto;flex-shrink:0}
+
+/* ─── DOMAIN ─────────────────────────────────────────────── */
+.domain-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.1rem}
+.domain-card{
+  background:var(--white);border:1.5px solid var(--off3);border-radius:var(--radius-lg);
+  padding:1.6rem;box-shadow:var(--shadow-sm);transition:all .2s;
+  display:flex;flex-direction:column;gap:.6rem;
+}
+.domain-card:hover{border-color:var(--blue-mid);box-shadow:var(--shadow);transform:translateY(-2px)}
+.domain-icon{font-size:1.4rem}
+.domain-title{font-family:'Fraunces',serif;font-size:.95rem;font-weight:600;color:var(--ink)}
+.domain-desc{font-size:.8rem;color:var(--ink3);line-height:1.65}
+
+/* ─── CONTACT ────────────────────────────────────────────── */
+#contact{
+  background:var(--ink);
+  padding:6rem 3rem;
+  position:relative;overflow:hidden;
+}
+#contact::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 600px 400px at 80% 50%,rgba(26,86,219,.18),transparent),
+    radial-gradient(ellipse 400px 300px at 10% 80%,rgba(8,145,178,.12),transparent);
+}
+.contact-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2}
+.contact-top{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:3.5rem}
+.contact-heading{
+  font-family:'Fraunces',serif;
+  font-size:clamp(2rem,3.5vw,3.2rem);font-weight:600;
+  color:#fff;letter-spacing:-.02em;line-height:1.1;margin-bottom:1rem;
+}
+.contact-heading em{font-style:italic;color:rgba(199,213,248,.85)}
+.contact-sub{font-size:.95rem;color:rgba(255,255,255,.55);line-height:1.75;max-width:420px}
+.contact-links{display:flex;flex-direction:column;gap:.85rem}
+.contact-link{
+  display:flex;align-items:center;gap:.9rem;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:10px;padding:1rem 1.4rem;
+  text-decoration:none;transition:all .2s;
+}
+.contact-link:hover{background:rgba(255,255,255,.1);border-color:rgba(199,213,248,.3)}
+.cl-icon{width:36px;height:36px;border-radius:8px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cl-icon svg{width:16px;height:16px;color:#fff}
+.cl-meta{}
+.cl-label{font-size:.65rem;color:rgba(255,255,255,.4);font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+.cl-value{font-size:.88rem;color:#fff;font-weight:500}
+.contact-cta{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:var(--blue);color:#fff;
+  padding:.85rem 2rem;border-radius:9px;font-size:.9rem;font-weight:600;
+  text-decoration:none;box-shadow:0 4px 16px rgba(26,86,219,.4);
+  transition:all .2s;margin-top:1.5rem;
+}
+.contact-cta:hover{background:#fff;color:var(--blue);transform:translateY(-2px)}
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+footer{
+  background:var(--ink);border-top:1px solid rgba(255,255,255,.06);
+  padding:1.5rem 3rem;
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:.75rem;color:rgba(255,255,255,.3);
+}
+
+/* ─── REVEAL ─────────────────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+@keyframes slideUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
+@media(max-width:960px){
+  nav{padding:0 1.5rem}
+  .nav-links{display:none}
+  .hero-inner{grid-template-columns:1fr;gap:3rem}
+  .hero-right{order:-1}
+  .section{padding:4rem 1.5rem}
+  .skills-layout{grid-template-columns:1fr}
+  .exp-entry{grid-template-columns:1fr}
+  .exp-sidebar{border-right:none;border-bottom:1px solid var(--off3)}
+  .contact-top{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:.5rem;text-align:center}
+  #contact{padding:4rem 1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────────────────────── -->
+<nav>
+  <a class="nav-brand" href="file:///C:/Users/sridevi.p/Downloads/sridevi_portfolio%20(4)%20(1).html#hero">
+    <div class="nav-brand-avatar">SP</div>
+    <span class="nav-brand-name">Sridevi P.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="file:///C:/Users/sridevi.p/Downloads/sridevi_portfolio%20(4)%20(1).html#skills-s" class="">Skills</a></li>
+    <li><a href="file:///C:/Users/sridevi.p/Downloads/sridevi_portfolio%20(4)%20(1).html#clients-s" class="">Clients</a></li>
+    <li><a href="file:///C:/Users/sridevi.p/Downloads/sridevi_portfolio%20(4)%20(1).html#exp-s" class="">Experience</a></li>
+    <li><a href="file:///C:/Users/sridevi.p/Downloads/sridevi_portfolio%20(4)%20(1).html#awards-s" class="">Awards</a></li>
+    <li><a href="file:///C:/Users/sridevi.p/Downloads/sridevi_portfolio%20(4)%20(1).html#certs-s" class="">Certs</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:1.2rem">
+    <div class="nav-status"><div class="ns-dot"></div>Available for hire</div>
+    <a href="file:///C:/Users/sridevi.p/Downloads/sridevi_portfolio%20(4)%20(1).html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────────────────── -->
+<div id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><div class="hero-badge-dot"></div>Open to opportunities · Chennai, TN</div>
+      <h1 class="hero-name">Sridevi <em>P.</em></h1>
+      <p class="hero-title">Data Analyst &nbsp;·&nbsp; <span>Business Analyst</span> &nbsp;·&nbsp; Capital Markets</p>
+      <p class="hero-desc">Detail-oriented analyst with 2.5+ years delivering enterprise analytics across Finance, Retail, Insurance &amp; FMCG. Specialist in Power BI, MS Fabric, Copilot Studio agents, and MCP Server automation for global clients including Coca-Cola, Tesco, HDFC ERGO, and L&amp;T.</p>
+      <div class="hero-ctas">
+        <a href="file:///C:/Users/sridevi.p/Downloads/sridevi_portfolio%20(4)%20(1).html#contact" class="btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"></path></svg>
+          Get in Touch
+        </a>
+        <a href="file:///C:/Users/sridevi.p/Downloads/sridevi_portfolio%20(4)%20(1).html#clients-s" class="btn-secondary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          View Client Work
+        </a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="hero-meta-val"><span class="cnt" data-t="2.5" data-d="1" data-s="+">2.5+</span></div>
+          <div class="hero-meta-lbl">Years experience</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-val"><span class="cnt" data-t="14" data-s="+">14+</span></div>
+          <div class="hero-meta-lbl">Client projects</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-val"><span class="cnt" data-t="5" data-s="">5</span></div>
+          <div class="hero-meta-lbl">Certifications</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="hero-meta-val"><span class="cnt" data-t="4" data-s="">4</span></div>
+          <div class="hero-meta-lbl">Awards</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- profile card -->
+    <div class="hero-right">
+      <div class="profile-card">
+        <div class="pc-header">
+          <div class="pc-avatar">SP</div>
+          <div class="pc-name">Sridevi P.</div>
+          <div class="pc-role">Data Analyst &amp; Business Analyst</div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-row"><span class="pc-row-key">EMAIL</span>spkumarsri1975@gmail.com</div>
+          <div class="pc-row"><span class="pc-row-key">PHONE</span>+91-8072876319</div>
+          <div class="pc-row"><span class="pc-row-key">CITY</span>Chennai, Tamil Nadu</div>
+          <div class="pc-row"><span class="pc-row-key">LINK</span>linkedin.com/in/sridevi-p</div>
+          <div class="pc-row"><span class="pc-row-key">STATUS</span><span style="color:var(--green);font-weight:600">● Available</span></div>
+        </div>
+        <div class="pc-stats">
+          <div class="pc-stat">
+            <div class="pc-stat-n" data-cnt="true"><span class="cnt2" data-t="2.5" data-d="1" data-s="+">2.5+</span></div>
+            <div class="pc-stat-l">Yrs Exp</div>
+          </div>
+          <div class="pc-stat">
+            <div class="pc-stat-n"><span class="cnt2" data-t="14" data-s="+">14+</span></div>
+            <div class="pc-stat-l">Clients</div>
+          </div>
+          <div class="pc-stat">
+            <div class="pc-stat-n"><span class="cnt2" data-t="5" data-s="">5</span></div>
+            <div class="pc-stat-l">Certs</div>
+          </div>
+          <div class="pc-stat">
+            <div class="pc-stat-n"><span class="cnt2" data-t="4" data-s="">4</span></div>
+            <div class="pc-stat-l">Awards</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SKILLS ───────────────────────────────────────────────────── -->
+<div class="section-divider"></div>
+<div id="skills-s" class="section">
+  <div class="sec-header-row reveal in">
+    <div>
+      <div class="sec-label"><div class="sec-label-dot"></div>01 — Expertise</div>
+      <h2 class="sec-heading">Technical Skills</h2>
+    </div>
+    <p class="sec-sub">Spanning business analysis, advanced visualisation, AI tooling, and data engineering.</p>
+  </div>
+  <div class="skills-layout reveal in">
+    <div class="skill-block">
+      <div class="skill-block-label">Business Analysis</div>
+      <div class="skill-chips">
+        <span class="chip chip-blue">Requirements Analysis</span>
+        <span class="chip chip-blue">BRD / FSD Writing</span>
+        <span class="chip chip-blue">UAT</span>
+        <span class="chip chip-blue">Agile / Scrum</span>
+        <span class="chip chip-blue">BDD Test Cases</span>
+        <span class="chip chip-blue">Backlog Mgmt</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-block-label">Visualisation</div>
+      <div class="skill-chips">
+        <span class="chip chip-teal">Power BI</span>
+        <span class="chip chip-teal">DAX</span>
+        <span class="chip chip-teal">Power Query</span>
+        <span class="chip chip-teal">Deneb</span>
+        <span class="chip chip-teal">Sankey</span>
+        <span class="chip chip-teal">Write-Back</span>
+        <span class="chip chip-teal">Tableau</span>
+        <span class="chip chip-teal">Qlik Sense</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-block-label">AI &amp; Copilot</div>
+      <div class="skill-chips">
+        <span class="chip chip-purple">Copilot Studio</span>
+        <span class="chip chip-purple">MCP Server</span>
+        <span class="chip chip-purple">Chat with Data</span>
+        <span class="chip chip-purple">Talk to Data</span>
+        <span class="chip chip-purple">Data Agents</span>
+        <span class="chip chip-purple">Ontology</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-block-label">Data Engineering</div>
+      <div class="skill-chips">
+        <span class="chip chip-green">MS Fabric</span>
+        <span class="chip chip-green">Databricks</span>
+        <span class="chip chip-green">ETL / ELT</span>
+        <span class="chip chip-green">Medallion Arch.</span>
+        <span class="chip chip-green">Azure Data Lake</span>
+        <span class="chip chip-green">SQL Server</span>
+        <span class="chip chip-green">Python</span>
+        <span class="chip chip-green">API Integration</span>
+      </div>
+    </div>
+    <div class="skill-block" style="grid-column:1/-1">
+      <div class="skill-block-label">Tools &amp; Platforms</div>
+      <div class="skill-chips">
+        <span class="chip chip-amber">Power Automate</span>
+        <span class="chip chip-amber">Tabular Editor</span>
+        <span class="chip chip-amber">Power BI Embedded</span>
+        <span class="chip chip-amber">JIRA</span>
+        <span class="chip chip-amber">Git</span>
+        <span class="chip chip-amber">Microsoft Teams</span>
+        <span class="chip chip-amber">SQL (Advanced)</span>
+        <span class="chip chip-amber">Excel</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CLIENTS ──────────────────────────────────────────────────── -->
+<div class="section-divider"></div>
+<div id="clients-s" class="section">
+  <div class="sec-header-row reveal in">
+    <div>
+      <div class="sec-label"><div class="sec-label-dot"></div>02 — Portfolio</div>
+      <h2 class="sec-heading">Client Projects</h2>
+    </div>
+    <p class="sec-sub">14+ engagements across global enterprises — from conversational analytics to report migrations.</p>
+  </div>
+  <div class="clients-grid reveal in">
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">Mackasen</div><span class="cc-badge badge-ai">AI / Automation</span></div>
+      <p class="cc-desc">Implemented MCP Server integration to enable automatic real-time updates to Power BI semantic models, eliminating manual refresh cycles in a time-sensitive reporting environment. Also designed UI/UX reports for Art of Possible.</p>
+      <div class="cc-stack"><span class="cc-chip">MCP Server</span><span class="cc-chip">Power BI</span><span class="cc-chip">Semantic Models</span><span class="cc-chip">UI/UX</span></div>
+    </div>
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">Coca-Cola</div><span class="cc-badge badge-ai">Conversational Analytics</span></div>
+      <p class="cc-desc">Deployed Copilot Studio Data Agents enabling Talk to Data and Chat with Data for stakeholders to surface insights conversationally. Also migrated legacy Tableau reports to Power BI.</p>
+      <div class="cc-stack"><span class="cc-chip">Copilot Studio</span><span class="cc-chip">Data Agents</span><span class="cc-chip">Talk to Data</span><span class="cc-chip">Tableau → Power BI</span></div>
+    </div>
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">HDFC ERGO</div><span class="cc-badge badge-ins">Insurance</span></div>
+      <p class="cc-desc">Developed custom Power BI visuals for insurance reporting and built a Copilot Studio agent integrated with Microsoft Teams, enabling staff to retrieve policy and claim analytics conversationally.</p>
+      <div class="cc-stack"><span class="cc-chip">Copilot Studio</span><span class="cc-chip">Custom Visuals</span><span class="cc-chip">Power BI</span><span class="cc-chip">MS Teams</span></div>
+    </div>
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">Tesco</div><span class="cc-badge badge-ret">Retail</span></div>
+      <p class="cc-desc">Developed a comprehensive Power BI report from scratch with a structured data story flow guiding users through key retail metrics, trends, and actionable insights.</p>
+      <div class="cc-stack"><span class="cc-chip">Power BI</span><span class="cc-chip">DAX</span><span class="cc-chip">Data Storytelling</span></div>
+    </div>
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">Middle Eastern Client</div><span class="cc-badge badge-bi">Finance</span></div>
+      <p class="cc-desc">Designed advanced dashboards with Deneb and Sankey custom visuals for complex data storytelling. Built native Write-Back so business users could update source data directly within reports.</p>
+      <div class="cc-stack"><span class="cc-chip">Deneb</span><span class="cc-chip">Sankey</span><span class="cc-chip">Write-Back</span><span class="cc-chip">Power BI</span></div>
+    </div>
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">Backshop</div><span class="cc-badge badge-eng">Engineering</span></div>
+      <p class="cc-desc">Automated data workflows via API key integrations with the Data Engineering team. Independently designed and built an Insurance Report UI/UX embedded into the company's client-facing portal.</p>
+      <div class="cc-stack"><span class="cc-chip">API Integration</span><span class="cc-chip">Data Engineering</span><span class="cc-chip">UI/UX Design</span><span class="cc-chip">Power BI</span></div>
+    </div>
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">BMS</div><span class="cc-badge badge-mig">Migration</span></div>
+      <p class="cc-desc">Led end-to-end migration of Tableau reports to Power BI, ensuring feature parity, improved rendering performance, and enhanced data accuracy for operational reporting.</p>
+      <div class="cc-stack"><span class="cc-chip">Tableau → Power BI</span><span class="cc-chip">DAX</span><span class="cc-chip">Report Migration</span></div>
+    </div>
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">L&amp;T</div><span class="cc-badge badge-mig">Migration</span></div>
+      <p class="cc-desc">Migrated a suite of operational reports from Qlik Sense to Power BI, improving performance, maintainability, and user adoption across the business unit.</p>
+      <div class="cc-stack"><span class="cc-chip">Qlik Sense → Power BI</span><span class="cc-chip">DAX</span><span class="cc-chip">Report Migration</span></div>
+    </div>
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">Beek</div><span class="cc-badge badge-ai">AI / Automation</span></div>
+      <p class="cc-desc">Created an intelligent agent that dynamically changes chart types and visual configurations in response to user queries, enabling a fully self-service reporting experience.</p>
+      <div class="cc-stack"><span class="cc-chip">AI Agents</span><span class="cc-chip">Power BI</span><span class="cc-chip">Visual Automation</span></div>
+    </div>
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">FABCON Europe — Global Mart</div><span class="cc-badge badge-bi">Conference Demo</span></div>
+      <p class="cc-desc">Built a high-level live demonstration for Global Mart, presented at the European FABCON Conference, showcasing Microsoft Fabric and Power BI capabilities to a global enterprise audience.</p>
+      <div class="cc-stack"><span class="cc-chip">MS Fabric</span><span class="cc-chip">Power BI</span><span class="cc-chip">Demo Design</span></div>
+    </div>
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">Racy Holding</div><span class="cc-badge badge-bi">Data Modelling</span></div>
+      <p class="cc-desc">Designed a comprehensive ontology framework defining business entity relationships, data definitions, and semantic hierarchies to standardise data discovery across the organisation.</p>
+      <div class="cc-stack"><span class="cc-chip">Ontology</span><span class="cc-chip">Semantic Modelling</span><span class="cc-chip">Power BI</span></div>
+    </div>
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">Transmed</div><span class="cc-badge badge-ret">Support</span></div>
+      <p class="cc-desc">Resolved critical reporting issues including fixing Tabular Editor configurations and authoring complex DAX measures to support business calculations and operational reporting.</p>
+      <div class="cc-stack"><span class="cc-chip">DAX</span><span class="cc-chip">Tabular Editor</span><span class="cc-chip">Power BI</span></div>
+    </div>
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">Lumera</div><span class="cc-badge badge-ai">UI/UX</span></div>
+      <p class="cc-desc">Designed intuitive UI/UX layouts and developed fully functional Power BI reports aligned to client branding and reporting standards for Art of Possible engagements.</p>
+      <div class="cc-stack"><span class="cc-chip">Power BI</span><span class="cc-chip">UI/UX Design</span><span class="cc-chip">Art of Possible</span></div>
+    </div>
+
+    <div class="client-card">
+      <div class="cc-top"><div class="cc-name">iLink Digital Portfolio</div><span class="cc-badge badge-eng">Embedded Analytics</span></div>
+      <p class="cc-desc">Embedded a Power BI report into the iLink Digital corporate website, enabling a seamless web-native analytics showcase for prospective clients and stakeholders.</p>
+      <div class="cc-stack"><span class="cc-chip">Power BI Embedded</span><span class="cc-chip">Web Integration</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── EXPERIENCE ───────────────────────────────────────────────── -->
+<div class="section-divider"></div>
+<div id="exp-s" class="section">
+  <div class="sec-header-row reveal in">
+    <div>
+      <div class="sec-label"><div class="sec-label-dot"></div>03 — Career</div>
+      <h2 class="sec-heading">Experience</h2>
+    </div>
+  </div>
+  <div class="exp-list reveal in">
+    <div class="exp-entry">
+      <div class="exp-sidebar">
+        <div class="exp-period">Jan 2024 – Present</div>
+        <div class="exp-company">iLink Digital</div>
+        <div class="exp-loc">Chennai, India</div>
+        <div style="margin-top:auto;padding-top:1.5rem">
+          <span style="display:inline-block;background:var(--green-light);color:var(--green);border:1px solid rgba(5,150,105,.2);padding:.3rem .7rem;border-radius:6px;font-size:.68rem;font-weight:600">Active</span>
+        </div>
+      </div>
+      <div class="exp-main">
+        <div class="exp-role">Data Analyst</div>
+        <ul class="exp-ul">
+          <li>Delivered analytics solutions across 14+ global clients in Finance, Retail, Insurance, and FMCG using Power BI, MS Fabric, Databricks, and AI-driven tooling.</li>
+          <li>Implemented MCP Server for Mackasen — enabling automatic real-time semantic model updates and eliminating manual refresh overhead.</li>
+          <li>Built Copilot Studio Data Agents for Coca-Cola and HDFC ERGO, enabling conversational analytics via Chat with Data and Talk to Data.</li>
+          <li>Designed advanced dashboards with Deneb and Sankey custom visuals; built native Write-Back solutions for direct in-report data entry.</li>
+          <li>Led report migrations from Tableau (BMS, Coca-Cola), Qlik Sense (L&amp;T), and Tabular models to Power BI with improved performance and accuracy.</li>
+          <li>Presented a live MS Fabric demonstration at the European FABCON Conference (Global Mart) to a global audience.</li>
+          <li>Created an AI-powered visual automation agent (Beek) that dynamically changes chart types based on user context.</li>
+          <li>Designed ontology frameworks (Racy Holding), automated workflows via API integrations (Backshop), and embedded Power BI into the iLink Digital website.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-entry">
+      <div class="exp-sidebar">
+        <div class="exp-period">Nov 2023 – Jun 2024</div>
+        <div class="exp-company">Geeks For Geeks</div>
+        <div class="exp-loc">Tamil Nadu, India</div>
+      </div>
+      <div class="exp-main">
+        <div class="exp-role">Campus Technology Lead</div>
+        <ul class="exp-ul">
+          <li>Built Power BI reports that identified $10K/month in wasted energy costs across campus facilities, directly informing cost optimisation decisions.</li>
+          <li>Increased student engagement by 35% through data-driven outreach strategies and targeted analytics campaigns.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── DOMAIN ────────────────────────────────────────────────────── -->
+<div class="section-divider"></div>
+<div id="domain-s" class="section">
+  <div class="sec-header-row reveal in">
+    <div>
+      <div class="sec-label"><div class="sec-label-dot"></div>04 — Industries</div>
+      <h2 class="sec-heading">Domain Exposure</h2>
+    </div>
+  </div>
+  <div class="domain-grid reveal in">
+    <div class="domain-card">
+      <div class="domain-icon">🏦</div>
+      <div class="domain-title">Capital Markets</div>
+      <div class="domain-desc">Reporting workflows, Collateral Management concepts, and settlement process awareness within financial services environments.</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon">🏥</div>
+      <div class="domain-title">Insurance</div>
+      <div class="domain-desc">Insurance reporting UIs and Copilot Studio agents for policy and claims analytics — HDFC ERGO and Backshop.</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon">🛒</div>
+      <div class="domain-title">Retail &amp; FMCG</div>
+      <div class="domain-desc">End-to-end report development and conversational analytics for large-scale retail organisations — Tesco, Coca-Cola, Transmed.</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon">💱</div>
+      <div class="domain-title">Finance &amp; Middle East</div>
+      <div class="domain-desc">Data reconciliation between live and offline systems; advanced visualisations for Middle Eastern financial clients.</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon">🏗️</div>
+      <div class="domain-title">Infrastructure &amp; Energy</div>
+      <div class="domain-desc">Energy usage analytics and campus facility cost optimisation reporting via Power BI.</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon">🌍</div>
+      <div class="domain-title">Global Enterprises</div>
+      <div class="domain-desc">Collaborated across time zones with enterprise teams at L&amp;T, BMS, and global FABCON conference audiences.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── AWARDS ────────────────────────────────────────────────────── -->
+<div class="section-divider"></div>
+<div id="awards-s" class="section">
+  <div class="sec-header-row reveal in">
+    <div>
+      <div class="sec-label"><div class="sec-label-dot"></div>05 — Recognition</div>
+      <h2 class="sec-heading">Honours &amp; Awards</h2>
+    </div>
+  </div>
+  <div class="awards-grid reveal in">
+    <div class="award-card">
+      <div class="award-icon-wrap">⭐</div>
+      <div class="award-title">Rising Star Award — Q4 2025</div>
+      <div class="award-org">iLink Digital</div>
+    </div>
+    <div class="award-card">
+      <div class="award-icon-wrap">🤝</div>
+      <div class="award-title">Best Team Award</div>
+      <div class="award-org">iLink Digital — Project Delivery Excellence</div>
+    </div>
+    <div class="award-card">
+      <div class="award-icon-wrap">💼</div>
+      <div class="award-title">Client Appreciation Award</div>
+      <div class="award-org">On-time delivery &amp; stakeholder satisfaction</div>
+    </div>
+    <div class="award-card">
+      <div class="award-icon-wrap">🥈</div>
+      <div class="award-title">Runner-up — NIT Datanxt Hackathon</div>
+      <div class="award-org">IoT Smart Energy Meter Project</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CERTS ─────────────────────────────────────────────────────── -->
+<div class="section-divider"></div>
+<div id="certs-s" class="section">
+  <div class="sec-header-row reveal in">
+    <div>
+      <div class="sec-label"><div class="sec-label-dot"></div>06 — Credentials</div>
+      <h2 class="sec-heading">Certifications</h2>
+    </div>
+  </div>
+  <div class="certs-grid reveal in">
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--blue)"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+      </div>
+      <div class="cert-name">Power BI Data Analyst Associate</div>
+      <div class="cert-check">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--blue)"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+      </div>
+      <div class="cert-name">Databricks Data Engineer Associate</div>
+      <div class="cert-check">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--blue)"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8m-4-4v4"></path></svg>
+      </div>
+      <div class="cert-name">Fabric Analytics Engineer Associate</div>
+      <div class="cert-check">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--blue)"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+      </div>
+      <div class="cert-name">HackerRank SQL (Advanced)</div>
+      <div class="cert-check">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--blue)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      </div>
+      <div class="cert-name">Azure IoT Hub Certification</div>
+      <div class="cert-check">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CONTACT ───────────────────────────────────────────────────── -->
+<div id="contact">
+  <div class="contact-inner">
+    <div class="contact-top">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:.35rem .9rem;border-radius:99px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.6);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.4rem">
+          07 — Contact
+        </div>
+        <h2 class="contact-heading">Let's build something<br><em>great together.</em></h2>
+        <p class="contact-sub">Available for full-time roles, freelance analytics projects, and consulting engagements across Data &amp; Business Analytics.</p>
+        <a href="mailto:spkumarsri1975@gmail.com" class="contact-cta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Send an Email
+        </a>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:spkumarsri1975@gmail.com" class="contact-link">
+          <div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+          <div class="cl-meta"><div class="cl-label">Email</div><div class="cl-value">spkumarsri1975@gmail.com</div></div>
+        </a>
+        <a href="tel:+918072876319" class="contact-link">
+          <div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"></path></svg></div>
+          <div class="cl-meta"><div class="cl-label">Phone</div><div class="cl-value">+91-8072876319</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/sridevi-p-65041922b/" target="_blank" class="contact-link">
+          <div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
+          <div class="cl-meta"><div class="cl-label">LinkedIn</div><div class="cl-value">https://www.linkedin.com/in/sridevi-p-65041922b/</div></div>
+        </a>
+        <div class="contact-link" style="cursor:default">
+          <div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+          <div class="cl-meta"><div class="cl-label">Location</div><div class="cl-value">Chennai, Tamil Nadu, India</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>© 2025 Sridevi P. — Data Analyst &amp; Business Analyst</span>
+  <span>Built with care · Chennai, India</span>
+</footer>
+
+<script>
+// Scroll reveal
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }});
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+// Number counter — easeOutExpo
+function animCount(el) {
+  const target = parseFloat(el.dataset.t);
+  const sfx = el.dataset.s || '';
+  const dec = parseInt(el.dataset.d || '0');
+  const dur = 2200;
+  const t0 = performance.now();
+  (function tick(now) {
+    const p = Math.min((now - t0) / dur, 1);
+    const ease = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
+    const v = target * ease;
+    el.textContent = (dec ? v.toFixed(dec) : Math.floor(v)) + sfx;
+    if (p < 1) requestAnimationFrame(tick);
+    else el.textContent = (dec ? target.toFixed(dec) : target) + sfx;
+  })(performance.now());
+}
+
+// Trigger hero counters on load
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.cnt, .cnt2').forEach((c, i) => {
+      setTimeout(() => animCount(c), i * 160);
+    });
+  }, 700);
+});
+
+// Active nav
+const sections = ['#skills-s','#clients-s','#exp-s','#awards-s','#certs-s','#contact'];
+window.addEventListener('scroll', () => {
+  const pos = window.scrollY + 90;
+  let active = '';
+  sections.forEach(id => {
+    const el = document.querySelector(id);
+    if (el && el.offsetTop <= pos) active = id;
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === active);
+  });
+}, { passive: true });
+</script>
+
+
+</body></html>
